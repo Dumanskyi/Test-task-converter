@@ -1,0 +1,58 @@
+$head: #FFB143;
+$content: #EFEBE4;
+$montserrat: 'Montserrat', sans-serif;
+
+
+body {
+    background-color: #344652;
+    .converter {
+        min-height: 500px;
+        background-color: #BBBD1D;
+        border-radius: 5px;
+        .head {
+            height: 100px;
+            background-color: $head;
+            text-align: center;
+            border-radius: 5px;
+            h1, h2 {
+                color: #344652;
+            }
+        }
+        .content {
+            min-height: 400px;
+            background-color: $content;
+            border-radius: 5px;
+            padding: 10px;
+
+            .currency {
+                display: flex;
+                justify-content: space-between;
+                @media (max-width: 650px) {
+                    flex-direction: column;
+                } 
+                .currencyFrom {
+                    width: 45%;
+                    @media (max-width: 650px) {
+                        width: 100%;
+                    } 
+                }
+                .currencyTo {
+                    width: 45%;
+                    @media (max-width: 650px) {
+                        width: 100%;
+                    } 
+                    span {
+                        font-family: $montserrat;
+                        font-size: 12px;
+                        line-height: 12px;
+                        color: rgba(52, 70, 82, 0.5);
+                        padding-left: 3px;
+                    }
+                }
+            }
+            .result {
+                text-align: center;
+            } 
+        }
+    }
+}
